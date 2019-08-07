@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    {{#trips}}
+
+    <form action="/delete-trip" method="POST">
+        <li>{{cityName}} - {{departDate}} - {{returnDate}}</li>
+        <button>Delete</button>
+        <input type="hidden" name="tripName" value="{{cityName}}" />
+        
+    </form>
+    {{/trips}}
+
+
+</body>
+
+</html>

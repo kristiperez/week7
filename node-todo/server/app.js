@@ -8,8 +8,7 @@ const app = express()
 //console.log(app)
 const cors = require('cors')
 const bodyParser = require('body-parser')
-
-// ths array will hold all the todos
+// this array will hold all the todos
 let todos = []
 
 // app.use mean you are using middleware
@@ -25,25 +24,26 @@ app.get('/',(req, res) => {
 //localhost:3000/todos (POST)
 app.post('/todos', (req, res) => {
     //this says you need to send an item with key of taskName
+    //taskName and taskPriority are strings
     let taskName = req.body.taskName
-    let priority = req.body.priority
-    let dateCreated = req.body.dateCreated
-    let dateCompleted = req.body.dateComplted
-    let isCompleted = req.body.isCompleted
-    console.log(taskName)
-    console.log(priority)
-    res.send("Got it")
+    let taskPriority = req.body.taskPriority
+    //create an annonymous task object. here you are creating an object called task
+    //name and priority are properties of the object task
+    let task = {name:taskName, priority:taskPriority}
+
+    todos.push(task)
+    // console.log(taskName)
+    // console.log(priority)
+    res.send(todos)  //don't send strings back to client. client needs to receive json
 })
 
 //localhost:3000/todos (DELETE)
-app.delete('/todos', (req,res) => {
-
-})
+// app.delete('/todos', (req,res) => {
+// })
 
 //localhost:3000/todos (GET)
 app.get('/todos',(req,res) => {
-    let tasks = [{name: 'Wash the car'}, {name: 'Feed the dog'}]
-    res.json(tasks)
+    res.json(todos)
 })
 
 //port is 3000, could be 3001 or any other 4 digit number but use 3000 as convention
