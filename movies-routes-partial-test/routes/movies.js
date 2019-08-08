@@ -28,9 +28,11 @@ router.post('/add-movie',(req,res) => {
 //localhost:3000/movies/delete-movie
 router.post('/delete-movie',(req,res) => {
     let movieTitle = req.body.movieTitle
+    console.log(movieTitle)
     movies = movies.filter(movie => {
         return movie.title != movieTitle
     })
+    console.log(movies)
     res.redirect('/movies')
 })
 //local host:3000/movies/movies
