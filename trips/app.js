@@ -44,7 +44,9 @@ app.post('/delete-trip', (req,res) => {
 })
 
 app.get('/trips',(req,res) => {
-    res.render('trips',{trips:trips})  //ask ben about this
+    //says to render the page called 'trips, the second arguement {trips:trips} is passing an object to the page in the form of a key value pair
+    //the key can be anything the value is the tips array in this case
+    res.render('trips',{trips:trips})  
 })
 
 app.get('/confirm',(req,res) =>{

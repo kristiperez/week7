@@ -1,0 +1,19 @@
+<html>
+
+<body>
+<h1>Movies</h1>
+
+{{#movies}}
+
+<form action="/delete-movie" method="POST">
+    <div>
+        <img src="{{posterURL}}" />
+        <label>{{title}}</label>
+        <button>Delete</button>
+        <input type="hidden" name="movieTitle" value="{{title}}" />
+    </div>
+</form>
+{{/movies}}
+</body>
+
+</html>
