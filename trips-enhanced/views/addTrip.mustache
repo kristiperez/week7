@@ -1,9 +1,17 @@
 <html>
+<head>
+<link rel="stylesheet" href="/css/styles.css" >
+</head>
+
 <body>
+
+{{>menu}}
+
     <form action="/add-trip" method="POST">
-        <input type="text" name="cityName" />
-        <input type="text" name="departDate" />
-        <input type="text" name="returnDate" />
+        <input type="text" name="cityName" placeholder="Enter trip name" />
+        <input type="text" name="departDate" placeholder="Enter departure date" />
+        <input type="text" name="returnDate" placeholder="Enter return date" />
+        <input type="text" name="imageURL" placeholder="Enter image URL"/>
         <button>Save</button>
     <form>
 

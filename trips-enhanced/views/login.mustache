@@ -1,0 +1,24 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+{{>menu}}
+
+<h1>Login</h1>
+
+<form action="/login" method="POST">
+
+<input type="text" name="username" placeholder="Enter username" />
+<input type="password" name="password" placeholder="Enter password" />
+<input type="submit" />
+
+{{message}}
+
+</form>
+
+</body>
+
+</html>

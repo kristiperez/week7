@@ -5,11 +5,11 @@
 
 <body>
 {{>menu}}
-    <h1>Trips</h1>
+    <h1>My Trips</h1>
 
     {{#trips}}
 
-    <form action="/delete-trip" method="POST">
+    <form action='/trips/my-trips' method="POST">
     
         <h3>{{cityName}}</h3>
         <li>{{departDate}} - {{returnDate}}</li>
