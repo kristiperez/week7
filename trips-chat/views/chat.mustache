@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/styles.css" >
+</head>
+    <body>
+    {{>menu}}
+        <span id="chatMessagesSPAN" style="">
+
+        </span>
+
+        <input type="text" id="chatMessageTextBox" />
+
+    
+        <input type="hidden" value="{{username}}" id="usernameChat">
+        <button id="sendButton">Send</button>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/client.js"></script>
+
+    </body>
+
+</html>

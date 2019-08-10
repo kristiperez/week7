@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/styles.css" >
+</head>
+
+<body>
+{{>menu}}
+    <h1>Trips</h1>
+
+    {{#trips}}
+
+    <form action="/trips/delete-trip" method="POST">
+    
+        <h3>{{cityName}}</h3>
+        <li>{{departDate}} - {{returnDate}}</li>
+        <img src="/images/{{imageURL}}" />
+        <button>Delete</button>
+        <input type="hidden" name="tripName" value="{{cityName}}" />
+        
+    </form>
+    {{/trips}}
+
+
+</body>
+
+</html>
